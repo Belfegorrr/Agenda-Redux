@@ -12,26 +12,11 @@ type Props = {
   mostrarFiltros: boolean
 }
 
-const BarraLateral = ({ mostrarFiltros }: Props) => {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  const { itens } = useSelector((state: RootReducer) => state.contatos)
-
+const BarraLateral = () => {
   return (
     <Aside>
       <div>
-        {mostrarFiltros ? (
-          <>
-            {/* <Campo
-              type="text"
-              placeholder="Buscar"
-              value={itens}
-              onChange={(evento) => dispatch(contatoNovo(evento.target.value))}
-            /> */}
-          </>
-        ) : (
-          <Botao onClick={() => navigate('/')}>Voltar a lista de tarefas</Botao>
-        )}
+        <Botao>Voltar a lista de tarefas</Botao>
       </div>
     </Aside>
   )
