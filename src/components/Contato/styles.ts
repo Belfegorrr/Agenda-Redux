@@ -45,9 +45,11 @@ export const BotaoCancelarRemover = styled(Botao)`
   background-color: #b33939;
 `
 export const Campo = styled.input`
-  width: 100%;
+  width: 50%;
+  display: block;
   border-radius: 8px;
-  padding: 8px;
+  margin-bottom: 16px;
+  padding: 10px;
   background-color: #fff;
   color: #666666;
   border-color: #666666;
