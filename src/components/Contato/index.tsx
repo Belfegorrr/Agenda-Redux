@@ -4,7 +4,7 @@ import * as S from './styles'
 
 import { remover, editar } from '../../store/reducers/contatos'
 import ContatoClass from '../../models/contato'
-import { Botao, BotaoSalvar } from '../../styles'
+import { Botao, BotaoSalvar, BotaoCancelar } from '../../styles'
 import { useDispatch } from 'react-redux'
 
 type Props = ContatoClass
@@ -66,13 +66,13 @@ const Contato = ({ name, email, telefone, id }: Props) => {
             >
               Salvar
             </BotaoSalvar>
-            <S.BotaoCancelarRemover
+            <BotaoCancelar
               onClick={() => {
                 cancelarEdicao()
               }}
             >
               Cancelar
-            </S.BotaoCancelarRemover>
+            </BotaoCancelar>
           </>
         ) : (
           <>

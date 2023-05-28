@@ -1,15 +1,8 @@
 import styled from 'styled-components'
 import { Botao } from '../../styles'
 
-// type TagProps = {
-//   nome?: string
-//   email?: string
-//   telefone?: number
-//   id?: number
-// }
-
 export const Card = styled.div`
-  background-color: #fcfcfc;
+  background-color: #474787;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 16px;
   margin-bottom: 32px;
@@ -22,40 +15,34 @@ export const Card = styled.div`
   }
 `
 export const Titulo = styled.textarea`
-  margin-left: 8px;
+  display: block;
+  color: #fff;
+  padding: 4px 8px;
+  background-color: #2c2c54;
+  border-radius: 8px;
   font-weight: bold;
   font-size: 18px;
+  margin-bottom: 16px;
+  resize: none;
 `
 export const Tag = styled.textarea`
   padding: 4px 8px;
   font-weight: bold;
   font-size: 10px;
   color: #fff;
-  background-color: #ccc;
+  background-color: #2c2c54;
+  margin-bottom: 16px;
   border-radius: 8px;
-  margin-right: 16px;
-  display: inline-block;
+
+  display: block;
   resize: none;
 `
-// export const Descricao = styled.textarea`
-//   color: #8b8b8b;
-//   font-size: 14px;
-//   line-height: 24px;
-//   font-family: 'Roboto Mono', monospace;
-//   display: block;
-//   width: 100%;
-//   margin-bottom: 16px;
-//   margin-top: 16px;
-//   resize: none;
-//   border: none;
-//   background-color: transparent;
-// `
 export const BarraDeAcoes = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 16px;
 `
 export const BotaoCancelarRemover = styled(Botao)`
-  background-color: #ccc;
+  background-color: #b33939;
 `
 export const Campo = styled.input`
   width: 100%;

@@ -1,22 +1,24 @@
-import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
-// import { Aside } from './styles'
-import { RootReducer } from '../../store'
-// import { contatoNovo } from '../../store/reducers/contatos'
-import { Botao, Aside } from '../../styles'
-
-// import { type } from './../../store/index'
+import { Aside, BotaoVoltar } from '../../styles'
 
 type Props = {
   mostrarFiltros: boolean
 }
 
-const BarraLateral = () => {
+const BarraLateral = ({ mostrarFiltros }: Props) => {
+  const navigate = useNavigate()
   return (
     <Aside>
       <div>
-        <Botao>Voltar a lista de tarefas</Botao>
+        {mostrarFiltros ? (
+          <>
+            <div></div>
+          </>
+        ) : (
+          <BotaoVoltar onClick={() => navigate('/')}>
+            Voltar a lista de tarefas
+          </BotaoVoltar>
+        )}
       </div>
     </Aside>
   )

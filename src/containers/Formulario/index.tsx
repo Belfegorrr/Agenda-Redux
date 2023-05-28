@@ -2,8 +2,8 @@ import { useDispatch } from 'react-redux'
 import { useState, FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { BotaoSalvar, MainContainer } from '../../styles'
-import { Titulo } from '../../components/Contato/styles'
+import { BotaoSalvar, MainContainer, TituloCadastro } from '../../styles'
+import { Campo, Titulo } from '../../components/Contato/styles'
 import { Form } from './styles'
 import { cadastrar } from '../../store/reducers/contatos'
 
@@ -29,7 +29,29 @@ const Formulario = () => {
 
   return (
     <MainContainer>
-      <Titulo>Nova Contato</Titulo>
+      <TituloCadastro>Novo Contato</TituloCadastro>
+
+      <Campo
+        value={name}
+        onChange={(evento) => setName(evento.target.value)}
+        type="text"
+        required
+        placeholder="Nome do Contato"
+      />
+      <Campo
+        value={email}
+        onChange={(evento) => setEmail(evento.target.value)}
+        type="email"
+        required
+        placeholder="seuemail@email.com"
+      />
+      <Campo
+        value={telefone}
+        onChange={(evento) => setTelefone(parseInt(evento.target.value))}
+        type="text"
+        required
+        placeholder="XX-XXXXXX"
+      />
 
       <Form onSubmit={cadastrarTarefa}>
         <BotaoSalvar type="submit">Cadastrar</BotaoSalvar>

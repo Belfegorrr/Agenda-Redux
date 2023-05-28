@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Circulo = styled(Link)`
-  height: 64px;
-  width: 64px;
-  background-color: #4a2b3e;
+  height: 50px;
+  width: 50px;
+  background-color: #84817a;
   color: #fff;
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 60px;
+  right: 60px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
